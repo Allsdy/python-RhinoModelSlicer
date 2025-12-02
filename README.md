@@ -1,6 +1,11 @@
 # Rhino Model Slicer
 A lightweight, real-time 3D slicing and G-code preview tool integrated directly into Rhino 7/8.
 
+
+https://github.com/user-attachments/assets/b06936bd-e15f-4dcb-aef1-2f989883abea
+
+
+
 #### 📖 Overview
 Rhino Slicer bridges the gap between CAD design and Additive Manufacturing. Instead of constantly exporting STLs, opening a slicer software, and checking for errors, this tool allows you to visualize the physical toolpath (G-code) directly inside the Rhino viewport.
 
