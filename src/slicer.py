@@ -460,3 +460,33 @@ def Run():
 
 if __name__ == "__main__":
     Run()
+    
+
+# ==============================================================================
+# 6. PLUGIN ENTRY POINT (插件入口)
+# ==============================================================================
+
+# 这是让 Rhino 识别这是一个命令的关键
+__commandname__ = "Slicer"
+
+def RunCommand(is_interactive):
+    # 1. 防止重复运行 (单例模式)
+    if SLICER_KEY in sc.sticky:
+        try: 
+            sc.sticky[SLICER_KEY].Close()
+        except: 
+            pass
+            
+    # 2. 启动面板
+    form = SlicerPanel()
+    form.Owner = Rhino.UI.RhinoEtoApp.MainWindow
+    form.Show()
+    
+    # 3. 存入内存防止闪退
+    sc.sticky[SLICER_KEY] = form
+    
+    return 0 # 0 = Success
+
+# 如果在编辑器里直接运行，依然有效
+if __name__ == "__main__":
+    RunCommand(True)
