@@ -256,7 +256,7 @@ class IncrementalManager:
 # ==============================================================================
 class SlicerPanel(forms.Form):
     def __init__(self):
-        self.Title = "Rhino Slicer V10 (Stable)"
+        self.Title = "Rhino Slicer"
         self.ClientSize = drawing.Size(380, 700)
         self.Topmost = True
         self.Resizable = False
