@@ -1,12 +1,12 @@
-Rhino Model Slicer
+# Rhino Model Slicer
 A lightweight, real-time 3D slicing and G-code preview tool integrated directly into Rhino 7/8.
 
-📖 Overview
+#### 📖 Overview
 Rhino Slicer bridges the gap between CAD design and Additive Manufacturing. Instead of constantly exporting STLs, opening a slicer software, and checking for errors, this tool allows you to visualize the physical toolpath (G-code) directly inside the Rhino viewport.
 
 It leverages the robust slicing engine of PrusaSlicer in the background to generate accurate, printable paths, while providing a seamless UI within Rhino.
 
-✨ Key Features
+#### ✨ Key Features
 Visualization: View slice layers and toolpaths inside the Rhino model space.
 
 Auto-Mesh Conversion: Works directly on NURBS (Polysurfaces/Breps) by auto-meshing in the background. No need to manually mesh your objects.
@@ -27,7 +27,7 @@ Z-Level Slider: Inspect specific layers.
 
 Path Simulator: Animate the nozzle movement for the active layer.
 
-⚙️ Prerequisites
+#### ⚙️ Prerequisites
 Rhino 7 or Rhino 8 (macOS or Windows).
 
 PrusaSlicer (Required as the backend engine).
@@ -36,7 +36,7 @@ Download here: PrusaSlicer Downloads
 
 Note: Even if you use a Bambu Lab printer, PrusaSlicer is required for this plugin to generate the preview geometry reliably.
 
-🚀 Installation & Setup
+#### 🚀 Installation & Setup
 1. Download the Script
 Save the Python script (e.g., RhinoSlicer.py) to a safe location on your computer. (e.g., /Users/YourName/Scripts/RhinoSlicer.py)
 
@@ -47,13 +47,13 @@ For macOS Users:
 
 Python
 
-# Default location for PrusaSlicer on Mac
+### Default location for PrusaSlicer on Mac
 SLICER_PATH = "/Applications/OriginalPrusaDrivers/PrusaSlicer.app/Contents/MacOS/PrusaSlicer"
 For Windows Users:
 
 Python
 
-# Default location for PrusaSlicer on Windows
+### Default location for PrusaSlicer on Windows
 SLICER_PATH = r"C:\Program Files\Prusa3D\PrusaSlicer\prusa-slicer-console.exe"
 3. Running the Tool
 You can run the tool using one of two methods:
@@ -70,7 +70,7 @@ Set the command macro: ! _-RunPythonScript "/Path/To/Your/RhinoSlicer.py"
 
 Now you can simply type Slicer in the command line.
 
-🎮 How to Use
+#### 🎮 How to Use
 Launch: Run the script to open the Rhino Slicer Pro panel.
 
 Pick Object: Click 1. Pick Mesh/NURBS and select your 3D model in the viewport.
